@@ -1,0 +1,263 @@
+/** <title>Frontend Mentor | [Challenge Name Here]</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+
+**/
+
+* {
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 50rem;
+    font-family: 'Rubik';
+    font-size: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+        "container main";
+    align-items: center;
+    background-color: thistle;
+}
+
+.container {
+    grid-area: container;
+    max-width: 246px;
+    height: 507px;
+
+    border-radius: 25px;
+
+    margin: auto;
+    font-size: 10px;
+}
+/** MOCKUP BORDER **/
+.container:before {
+    z-index: -3;
+    content: '';
+    position: absolute;
+    width: 15.3rem;
+    height: 31.2rem;
+    margin-left: -1rem;
+    margin-top: -0.87rem;
+    border-radius: 37px;
+    border: solid 15px rgb(255, 255, 255);
+}
+
+/** HEADER APP **/
+.header-app:before {
+    z-index: -2;
+    content: '';
+    position: absolute;
+    width: 244px;
+    height: 57px;
+
+    background: linear-gradient(to right,hsl(264, 100%, 61%), hsl(293, 100%, 63%));
+    border-radius: 25px 25px 0 0;
+}
+
+/** HEADER < BACK BUTTON **/
+.header-app::after {
+    z-index: -1;
+    position: absolute;
+    content: '';
+
+    margin-top: 30px;
+    margin-left: 20px;
+
+    border-right: 2px solid; 
+    border-bottom: 2px solid;
+    height: 6px;
+    width: 6px;
+    transform: rotate(135deg);
+}
+
+/** HEADER CAMERA AREA **/
+.header-app::after {
+    z-index: -1;
+    position: absolute;
+    content: '';
+
+    margin-top: -0.7rem;
+    margin-left: 3.7rem;
+
+    background: #ffffff none repeat scroll 0 0;
+    border-radius: 12px 12px 0 0;
+    height: 20px;
+    width: 140px;
+
+    transform: rotate(180deg);
+}
+
+/** HEADER ... BACK BUTTON **/
+.header-app span:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+
+    content: '\2807';
+    font-size: 2em;
+    color: #ffffff;
+
+    margin-left: 6rem;
+    margin-top: -0.7rem;
+
+    transform: rotate(180deg)
+}
+
+/** HEADER - USER and STATUS **/
+.header-app {
+    height: 65px;
+    width: 244px;
+    display: grid;
+    grid-template-columns: 0.2fr 0.8fr;
+    align-items: center;
+    color:  hsl(0, 0%, 100%) ;
+}
+
+.header-app span {
+    color: hsl(276, 100%, 81%);
+    font-size: 80%;
+}
+
+.header-app div:nth-child(2) {
+    margin-left: 0.7rem;
+    margin-bottom: -0.5rem;
+}
+
+.header-app img {
+    width: 25px;
+    border-radius: 50px;
+    margin-left: 2rem;
+    margin-bottom: -0.5rem;
+    border: hsl(0, 0%, 100%) 1px solid;
+}
+
+/** CONTAINER - CHAT CONTENT **/
+.container div {
+    margin-bottom: 0.5rem;
+}
+
+.walker-msg {
+    width: 127px;
+    height: fit-content;
+    background-color: hsl(0, 0%, 100%);
+    padding: 0.3rem;
+    margin-left: 0.7rem;
+    border-radius: 10px 10px 10px 2px ;
+    line-height: 0.9rem;
+    font-size: 80%;
+    color:hsl(276, 55%, 52%);
+}
+
+.dog-image {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 0.4rem;
+}
+
+.dog-image img {
+    width: 25%;
+    border-radius: 15px;
+    padding: 0.4rem;
+}
+
+.client-msg-1, .client-msg-2 {
+    background-color: hsl(0, 0%, 100%);
+    padding: 0.3rem;
+    border-radius: 8px 8px 1px 8px ;
+    display: flex;
+    line-height: 0.9rem;
+    font-size: 80%;
+    color: hsl(271, 15%, 43%);
+}
+
+.client-msg-1 {
+    width: 154px;
+    display: flex;
+    margin-left: 80px;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 0.2rem 0.1rem 0.2rem 0.8rem;
+}
+
+.client-msg-2 {
+    width: 90px;
+    display: flex;
+    margin-left: 145px;
+}
+
+.propose {
+    width: 145px;
+    height: 31px;
+    background: linear-gradient(to right,hsl(264, 100%, 61%), hsl(293, 100%, 63%));
+    padding: 0.3rem;
+    margin-left: 0.7rem;
+    border-radius: 10px 10px 10px 4px ;
+    line-height: 0.9rem;
+    font-size: 80%;
+    color: hsl(0, 0%, 100%);
+}
+
+.circle {
+    content: '';
+    position: absolute;
+    border: 2px solid hsla(289, 100%, 72%, 0.63);
+    border-radius: 50px;
+    width: 13px;
+    height: 13px;
+    margin: 3px 0 0 0.2rem;
+}
+
+.min, .hour {
+    margin: 4px 0 0 25px ;
+}
+
+
+.min span {
+    margin-left: 15px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.hour span {
+    margin-left: 30px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+
+.type-msg {
+    display: flex;
+    align-content: center;
+    width: 220px;
+    height: 35px;
+    border-radius: 20px;
+    background-color: white;
+
+    color: hsl(206, 6%, 79%);
+}
+
+/** MAIN - RIGHT TEXT **/
+main {
+    width: 458px;
+    height: 206px;
+    grid-area: main;
+    display: flex;
+    flex-wrap: wrap;
+    line-height: 1.6rem;
+    color: hsl(270, 7%, 64%);
+}
+
+main h1 {
+    color: hsl(271, 36%, 24%);
+    font-weight: 500;
+    font-size: 2.5rem;
+}
+
+
