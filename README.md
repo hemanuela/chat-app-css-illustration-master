@@ -26,13 +26,13 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](https://github.com/hemanuela/chat-app-css-illustration-master/blob/main/design/my-screenshot.jpg)
 
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [My solution](https://github.com/hemanuela/chat-app-css-illustration-master)
+- Live Site URL: [Here](https://hemanuela.github.io/chat-app-css-illustration-master/)
 
 ## My process
 
